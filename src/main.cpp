@@ -61,11 +61,7 @@ int main(int argc, const char **argv)
         else
             osm_data = std::move(*data);
     }
-    //Complete this TODO to satisfy Project Rubric Criterias of User Input
-  
-    // TODO 1: Declare floats `start_x`, `start_y`, `end_x`, and `end_y` and get
-    // user input for these values using std::cin. Pass the user input to the
-    // RoutePlanner object below in place of 10, 10, 90, 90.
+    
     float start_x, start_y, end_x, end_y;
   
   	start_x = PromptUser("Enter number from 0 to 100 for start x value: ");
@@ -73,25 +69,6 @@ int main(int argc, const char **argv)
   	end_x = PromptUser("Enter number from 0 to 100 for end x value: ");
     end_y = PromptUser("Enter number from 0 to 100 for end y value: ");
   	
-//     start_x = start_y = end_x = end_y = -1;
-
-//     while(start_x < 0 || start_x > 100) {
-//         std::cout << "Enter number from 0 to 100 for start x value: ";
-//         std::cin >> start_x;
-//     }
-//     while(start_y < 0 || start_y > 100) {
-//         std::cout << "Enter number from 0 to 100 for start y value: ";
-//         std::cin >> start_y;
-//     }
-//     while(end_x < 0 || end_x > 100) {
-//         std::cout << "Enter number from 0 to 100 for end x value: ";
-//         std::cin >> end_x;
-//     }
-//     while(end_y < 0 || end_y > 100) {
-//         std::cout << "Enter number from 0 to 100 for end y value: ";
-//         std::cin >> end_y;
-//     }
-
     // Build Model.
     RouteModel model{osm_data};
 
