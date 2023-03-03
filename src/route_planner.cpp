@@ -34,9 +34,7 @@ void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
 }
 
 RouteModel::Node *RoutePlanner::NextNode() {
-  //std::sort(vec.begin(), vec.end(), [](int a, int b) {return a > b; });
   	std::sort(open_list.begin(), open_list.end(), [](const auto &a, const auto &b) {return ((a->g_value + a->h_value) > (b->g_value + b->h_value)); } );
-  //     std::sort(open_list.begin(), open_list.end(), Compare);
 
     int last_in_list = open_list.size() - 1;
     auto lowest_node = open_list[last_in_list];
